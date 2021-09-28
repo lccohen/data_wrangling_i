@@ -75,7 +75,7 @@ mlb11_df = read_excel("data/mlb11.xlsx")
 ```
 
 ```{r}
-fellow_df = read_excel("data/LotR_Words.xlsx", range "B3:D6")
+fellow_df = read_excel("data/LotR_Words.xlsx", range = "B3:D6")
 ```
 ## Read a SAS file
 

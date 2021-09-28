@@ -1,10 +1,6 @@
 Simple document
 ================
 
-``` r
-library(tidyverse)
-```
-
 ## Import some data
 
 I want to import ‘FAS\_litters.csv’.
@@ -171,4 +167,32 @@ litters_data = read_csv(file = "./data/FAS_litters.csv",
    `Pups survive` = col_double()
  )
 )
+```
+
+## Reading from Excel
+
+``` r
+mlb11_df = read_excel("data/mlb11.xlsx")
+```
+
+``` r
+fellow_df = read_excel("data/LotR_Words.xlsx", range = "B3:D6")
+```
+
+## Read a SAS file
+
+This is where I tried to read a SAS file and didn’t
+
+``` r
+pulse_df = read_sas("data/public_pulse_data.sas7bdat")
+```
+
+\#\#why to never use ‘read.csv’
+
+‘read.csv’ doesn’t give ‘tibble’ and that’s really bad
+
+## how do I export data
+
+``` r
+write_csv(fellow_df,"data/fellwship_words.csv")
 ```
